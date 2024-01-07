@@ -14,9 +14,9 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
     - name: Set Up Flutter
-      uses: flutter/flutter@v2
+      uses: subosito/flutter-action@v2
       with:
-        channel: 'stable' # or 'beta' or 'dev'     
+        # channel: 'stable' # or 'beta' or 'dev'     
         flutter-version: '3.16.5'
     # - name: Setup Flutter
     #   uses: subosito/flutter-action@v2
