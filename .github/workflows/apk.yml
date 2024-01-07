@@ -13,15 +13,15 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
+    - name: Set Up Flutter
+      uses: flutter/flutter@v2
+      with:
+        channel: 'stable' # or 'beta' or 'dev'     
 
-    - name: Set Up Dart
-      uses: dart-lang/setup-dart@v2
-      with:
-        sdk: 'latest'
-    - name: Setup Flutter
-      uses: subosito/flutter-action@v2
-      with:
-        flutter-version: '3.2.3' # Set your desired Flutter version
+    # - name: Setup Flutter
+    #   uses: subosito/flutter-action@v2
+    #   with:
+    #     flutter-version: '3.2.3' # Set your desired Flutter version
 
     - name: Get Dependencies
       run: flutter pub get
