@@ -14,10 +14,14 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: Set Up Dart
+      uses: dart-lang/setup-dart@v2
+      with:
+        sdk: 'latest'
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.16.0' # Set your desired Flutter version
+        flutter-version: 'latest' # Set your desired Flutter version
 
     - name: Get Dependencies
       run: flutter pub get
