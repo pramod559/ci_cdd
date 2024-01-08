@@ -1,0 +1,22 @@
+{
+  "files.exclude": {
+    ".dart_tool": true,
+    ".git": true,
+    ".gitignore": true,
+    ".idea": true,
+    ".metadata": true,
+    ".vscode": true,
+    "analysis_options.yaml": true,
+    "android": true,
+    "build": true,
+    "ci_cdd": true,
+    "ci_cdd.iml": true,
+    "ios": true,
+    "linux": true,
+    "macos": true,
+    "pubspec.lock": true,
+    "README.md": true,
+    "web": true,
+    "windows": true
+  }
+}
