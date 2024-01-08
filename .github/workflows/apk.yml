@@ -16,16 +16,13 @@ jobs:
     - name: Set Up Flutter
       uses: subosito/flutter-action@v2
       with:
-<<<<<<< HEAD
-        flutter-version: '3.2.3' # Set your desired Flutter version
-=======
+        # flutter-version: '3.2.3' # Set your desired Flutter version
         # channel: 'stable' # or 'beta' or 'dev'     
         flutter-version: '3.16.5'
     # - name: Setup Flutter
     #   uses: subosito/flutter-action@v2
     #   with:
     #     flutter-version: '3.2.3' # Set your desired Flutter version
->>>>>>> 9df9218fc478745bc1fd4431b79cb736702901f4
 
     - name: Get Dependencies
       run: flutter pub get
