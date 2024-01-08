@@ -19,7 +19,7 @@ jobs:
           flutter-version: '2.15.1'  # Set your desired Flutter version
 
       - name: Get Dependencies
-        run: flutter pub get
+        run: flutter pub get    
 
       - name: Build APK
         run: flutter build apk
