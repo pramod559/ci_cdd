@@ -29,31 +29,26 @@ jobs:
         with:
           name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
-name: Build and Upload to Google Drive
+  # name: Build and Upload to Google Drive
 
-on:
-  push:
-    branches:
-      - feature/configure-ci  # Change this to your main branch name
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v2
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+#       - name: Set Up Flutter
+#         uses: subosito/flutter-action@v2
+#         with:
+#           flutter-version: '2.15.1'  # Set your desired Flutter version
 
-      - name: Set Up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '2.15.1'  # Set your desired Flutter version
+#       - name: Get Dependencies
+#         run: flutter pub get
 
-      - name: Get Dependencies
-        run: flutter pub get
-
-      - name: Build APK
-        run: flutter build apk
+#       - name: Build APK
+#         run: flutter build apk
 
       - name: Archive APK
         uses: actions/upload-artifact@v2
