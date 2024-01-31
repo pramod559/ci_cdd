@@ -1,0 +1,31 @@
+name: Release and Upload to Google Drive
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '2.x' # Change this to your Flutter version
+
+    - name: Get dependencies
+      run: flutter pub get
+      
+    - name: Build release APK
+      run: flutter build apk --release
+
+    - name: Upload to Google Drive
+      run: |
+        python upload_to_google_drive.py ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+      env:
+        GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
