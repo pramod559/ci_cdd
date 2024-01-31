@@ -1,0 +1,32 @@
+name: Build and Release Flutter App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '2.x' # Change this to your Flutter version
+
+    - name: Get dependencies
+      run: flutter pub get
+      
+    - name: Build release APK
+      run: flutter build apk --release
+      
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: app-release
+        path: build/app/outputs/flutter-apk/app-release.apk
+        
