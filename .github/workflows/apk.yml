@@ -18,7 +18,7 @@ jobs:
       with:
         # flutter-version: '3.2.3' # Set your desired Flutter version
         # channel: 'stable' # or 'beta' or 'dev'     
-        flutter-version: '3.16.5'
+        flutter-version: '3.16.8'
     # - name: Setup Flutter
     #   uses: subosito/flutter-action@v2
     #   with:
