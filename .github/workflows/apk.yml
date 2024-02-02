@@ -25,7 +25,7 @@ jobs:
     - name: Set Up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.16.8' # Set your desired Flutter version
+        flutter-version: '3.19.0-0.2.pre' # Set your desired Flutter version
         channel: 'beta' # or 'beta' or 'dev'     
    #     flutter-version: '3.16.5'
     # - name: Setup Flutter
